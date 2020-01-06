@@ -64,7 +64,12 @@ if [[ "$CATplus" == "YES" ]]
 			then
 				RESULT="SET"
 			else
-				RESULT="NOT SET"
+				if [[ $SCstatus == "" ]]
+					then
+						RESULT="NOT PRESENT"
+					else
+						RESULT="NOT SET"
+				fi
 		fi
 	else
 		RESULT="OS is Lower than Catalina"
